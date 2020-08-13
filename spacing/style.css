@@ -1,9 +1,23 @@
+body{
+	background-color: #ADD8E6; 
+}
+
 p {
 	font-size: 30px;
 	font-family: sans-serif;
 	padding: 10px;
 	margin-bottom: 10px;
 	border: solid 10px #B5C0E0;
-	border-style: dashed;
-	border-width: 0 0 0 10px;
+	/*border-style: dashed;*/
+	/*border-width: 0 0 0 10px;*/
+	background-color: #E7F5F4;
+}
+
+.bg-transparent{
+	background-color: transparent;
+}
+
+.bg-gradient {
+	background: rgb(89,195,148); /*Thêm vào để lỡ background-gradient không được hiển thị thì sẽ dùng màu mặc định này.*/
+	background: linear-gradient(90deg, rgba(89,195,148,1) 0%, rgba(197,217,221,1) 100%);
 }

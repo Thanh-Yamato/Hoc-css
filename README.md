@@ -1,6 +1,6 @@
 Học css
 --- Có thể xem các thuộc tính trên gg gõ css cheat sheet.
-1. Font trong css:
+1. Font trong css.
 	- font-family: Kiểu chữ trong css.
 	- font-weight: normal/bold.
 2. Spacing trong css: padding, margin.
@@ -22,7 +22,7 @@ Học css
 		+ margin: top right-left bottom.
 		+ margin: top-bottom right-left.
 		+ margin: Tất-cả.
-3. Border
+3. Border.
 	- border-style: solid/dotted/dashed...
 	- border-width: Khoảng-cách.
 	- border-color: Màu.
@@ -31,3 +31,7 @@ Học css
 	- border-top-width.
 	- border-right-width.
 	- border-width: top right bottom left.
+4. Background-color: bao gồm cả padding lẫn content.
+	- background-color: Màu.
+	- background-color: transparent.( Màu trong suốt, có thể thấy được nền của layer đã bị chồng)
+	- background-color: Gradient.( Kiểu thay đổi nhiều màu, lên gg gõ background gradient generator)
