@@ -43,3 +43,4 @@ Học css
 	- background-position.
 	- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.
 	- background-size auto | contain | cover.
+6. Icons: https://fontawesome.com
