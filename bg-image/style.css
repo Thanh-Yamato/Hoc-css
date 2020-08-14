@@ -1,0 +1,32 @@
+body {
+	background-image: url('./abtract-bg.jpg');
+}
+
+div {
+	font-size: 20px;
+	margin: 10px;
+	padding: 20px;
+	font-weight: bolder;
+	border-radius: 10px; 
+	color: #A78888;
+	font-family: sans-serif;
+	background-image: url('bg.jpg');
+	background-size: 10%;
+	background-clip: 30%;
+	border: 10px dotted red;
+}
+
+.bg {
+	background-image: url('bg.jpg');
+	background-size: 50%;
+	background-repeat: round;
+	height: 100px;
+	background-attachment: fixed;
+}
+
+.bg-position {
+	background-image: url('bg-image.jpg');
+ 	background-position: 20%;
+ 	background-repeat: no-repeat;
+ 	background-size: contain;
+}
