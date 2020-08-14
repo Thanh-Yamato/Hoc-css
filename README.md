@@ -23,7 +23,7 @@ Học css
 		+ margin: top-bottom right-left.
 		+ margin: Tất-cả.
 3. Border.
-	- border-style: solid/dotted/dashed...
+	- border-style: solid | dotted | dashed...
 	- border-width: Khoảng-cách.
 	- border-color: Màu.
 	- Shorthand:
@@ -35,3 +35,11 @@ Học css
 	- background-color: Màu.
 	- background-color: transparent.( Màu trong suốt, có thể thấy được nền của layer đã bị chồng)
 	- background-color: Gradient.( Kiểu thay đổi nhiều màu, lên gg gõ background gradient generator)
+5. Background-image: Ảnh nền.
+	- background-image: url('Đường-dẫn') | none.
+	- background-size: %.( Kích cỡ của ảnh)
+	- background-attachment: fixed | scroll*.
+	- background-clip: border-box* | padding-box | content-box.( Chế độ bao phủ: từ border, padding, content)
+	- background-position.
+	- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.
+	- background-size auto | contain | cover.
