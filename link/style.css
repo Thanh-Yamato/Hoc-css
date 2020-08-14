@@ -1,0 +1,26 @@
+.default-link {
+	margin: 100px; 
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #c7fdf7;
+	color: #2c70ec;
+}
+
+.default-link:link {
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.default-link:hover {
+	text-decoration: underline;
+	background: rgb(58,180,169);
+	background: radial-gradient(circle, rgba(58,180,169,1) 0%, rgba(252,69,76,0.5478032178217822) 70%);
+}
+
+.default-link:active {
+	color: yellow;
+}
+
+.default-link:visited {
+	color: pink;
+}
