@@ -44,3 +44,8 @@ Học css
 	- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.
 	- background-size auto | contain | cover.
 6. Icons: https://fontawesome.com
+7. Styling link: Có thể dùng với nhiều thẻ khác nhưng chỉ nên dùng với thẻ a.
+	- a:link: Dùng để hiển thị đường dẫn ban đầu.
+	- a:hover: Dùng để hiển thị đặt trỏ chuột lên đường dẫn.
+	- a:active: Dùng để hiển thị khi nhấn giữ không buông chuột.
+	- a:visited: Dùng để hiển thị khi đã nhấn vào đường dẫn.
