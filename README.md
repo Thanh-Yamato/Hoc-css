@@ -44,3 +44,17 @@ Học css
 	- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.
 	- background-size auto | contain | cover.
 6. Icons: https://fontawesome.com
+7. Styling link: Có thể dùng với nhiều thẻ khác nhưng chỉ nên dùng với thẻ a.
+	- a:link: Dùng để hiển thị đường dẫn ban đầu.
+	- a:hover: Dùng để hiển thị đặt trỏ chuột lên đường dẫn.
+	- a:active: Dùng để hiển thị khi nhấn giữ không buông chuột.
+	- a:visited: Dùng để hiển thị khi đã nhấn vào đường dẫn.
+8. Table.
+	- Gồm các thẻ: table, tr, th, td.
+	- border-collapse: seperated* | collapse.
+	- vertical-align: top | middle | bottom.
+	- text-align: left | center | right.
+	- th, td không có margin.
+	- Có thể dùng hover cho table, tr, td, th.
+	- Tô màu nền theo quy luật: :nth-child(an+b) hoặc :nth-child(even | odd).
+

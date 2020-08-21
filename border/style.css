@@ -1,0 +1,31 @@
+.table-css {
+	border-collapse: collapse;
+	font-family: sans-serif;
+	caption-side: bottom;
+	width: 100%;
+}
+.table-css th, .table-css td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	height: 50px;
+	/*vertical-align: bottom;*/
+}
+
+.table-css th {
+	background: #4caf50;
+	color: #fff;
+	text-align: left;
+}
+
+.table-css tr:nth-child(2n+2) {
+	background-color: #eee;
+}
+
+.table-css tr:hover {
+	background: #0605054f;
+}
+
+.table-css caption {
+	padding-top: 5px;
+	font-size: 15px;
+}
