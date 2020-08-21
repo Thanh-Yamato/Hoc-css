@@ -57,4 +57,8 @@ Học css
 	- th, td không có margin.
 	- Có thể dùng hover cho table, tr, td, th.
 	- Tô màu nền theo quy luật: :nth-child(an+b) hoặc :nth-child(even | odd).
-
+9. Lists: ul, li, ol.
+	- list-style-type: none | square | circle | upper/lower roman/alpha.
+	- list-style-position: inside | outside.
+	- list-style-image: url('filepath').
+	- list-style: type position image.
