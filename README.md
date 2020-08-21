@@ -62,3 +62,21 @@ Học css
 	- list-style-position: inside | outside.
 	- list-style-image: url('filepath').
 	- list-style: type position image.
+10. Display: inline vs block.
+	- inline: Chiều rộng bằng nội dung của nó, có thể nằm cùng 1 hàng với các inline element khác.
+	- block: chiếm trọn 1 hàng.
+	- Có thể chuyển từ trạng thái inline sang block và ngược lại bằng cách thêm css 
+		{
+			display: inline/block
+		}
+
+	|===============|=================================|=================================|
+	|               |	   inline	          |      	block               |
+	|---------------|---------------------------------|---------------------------------|
+	| width, height |	Không thay đổi		  |      	Có thay đổi	    |
+	|---------------|---------------------------------|---------------------------------|
+	|    margin     |      Thay đổi left, right       |        Thay đổi tất cả          |
+	|		|      Không thay đổi top, bottom |                                 |
+	|---------------|---------------------------------|---------------------------------|
+	|   padding     |       Có thể thay đổi cả 4	  |	 Có thể thay đổi cả 4	    |
+	|===================================================================================| 
