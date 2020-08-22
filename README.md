@@ -72,9 +72,9 @@ Học css
 
 	|  | inline | block |
 	| --- | --- | --- |
-	| width, height |			Không thay đổi		  |      	Có thay đổi	            |
+	| width, height | Không thay đổi | Có thay đổi |
 	| --- | --- | --- |
-	|    margin     |      Thay đổi left, right       |        Thay đổi tất cả          |
-	|				|      Không thay đổi top, bottom |                                 |
+	| margin | Thay đổi left, right | Thay đổi tất cả |
+	| | Không thay đổi top, bottom |  |
 	| --- | --- | --- |
-	|	padding     |       Có thể thay đổi cả 4	  |	 	Có thể thay đổi cả 4	    |
+	| padding | Có thể thay đổi cả 4 | Có thể thay đổi cả 4 |
