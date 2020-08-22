@@ -42,7 +42,7 @@ Học css
 	- background-clip: border-box* | padding-box | content-box.( Chế độ bao phủ: từ border, padding, content)
 	- background-position.
 	- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.
-	- background-size auto | contain | cover.
+	- background-size: auto | contain | cover.
 6. Icons: https://fontawesome.com
 7. Styling link: Có thể dùng với nhiều thẻ khác nhưng chỉ nên dùng với thẻ a.
 	- a:link: Dùng để hiển thị đường dẫn ban đầu.
@@ -78,3 +78,19 @@ Học css
 	| | Không thay đổi top, bottom |  |
 	| --- | --- | --- |
 	| padding | Có thể thay đổi cả 4 | Có thể thay đổi cả 4 |
+11. CSS Combinators. Có 4 kiểu:
+
+	- Desendant selector( Dùng dấu cách)
+
+	VD: .list1 li nghĩa là tất cả những thẻ li nằm trong class list1 sẽ được chọn.( Nghĩa là những thẻ li là con, cháu,... của class list1)
+
+	- Child selector( Dùng dấu >)
+
+	VD: .list1 > li nghĩa là chỉ những thẻ li là thẻ con nằm trong class list1 mới được chọn, không chọn thẻ li là cháu, chút, chít... của class list1.
+
+	- Adjacent sibling selector( Dùng dấu +): phải cùng hàng, cùng thẻ cha vì nó là anh chị em, và chỉ chọn 1 cái kế tiếp ngay sau giống với bộ kết hợp.
+
+	VD: .list1 + ul nghĩa là chọn thẻ ul ngang hàng với class list1 và ngay sau là ul class list2 và chỉ chọn 1 ul class list2 không chọn tiếp ul class list3.
+
+	- General sibling selector( Dùng dấu ~): phải ngang hàng, cùng thẻ cha vì nó là anh chị em, chọn tất những anh chị em sau nó đúng với bộ chọn.
+	VD: .list1 ~ ul nghĩa là chọn tất cả những thẻ ul ngang hàng, đứng sau nó, đó là ul.list2 và cả ul.list3.
