@@ -1,0 +1,24 @@
+ul {
+	color: red;
+	font-family: sans-serif;
+}
+
+/* Descendant selector */
+/*.list1 li {
+	color: blue;
+}
+*/
+/* Child selector */
+/*.list1 > li {
+	color: green;
+}*/
+
+/* Adjacent sibling selector */
+/*.list1 + ul {
+	border: 3px solid #DDD;
+}*/
+
+/* General sibling selector */
+/*.list1 ~ ul {
+	border: 3px solid #EEE;
+}*/
