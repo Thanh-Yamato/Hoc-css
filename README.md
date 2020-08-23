@@ -46,9 +46,9 @@ Học css
 6. Icons: https://fontawesome.com
 7. Styling link: Có thể dùng với nhiều thẻ khác nhưng chỉ nên dùng với thẻ a.
 	- a:link: Dùng để hiển thị đường dẫn ban đầu.
-	- a:hover: Dùng để hiển thị đặt trỏ chuột lên đường dẫn.
-	- a:active: Dùng để hiển thị khi nhấn giữ không buông chuột.
 	- a:visited: Dùng để hiển thị khi đã nhấn vào đường dẫn.
+	- a:hover: Dùng để hiển thị đặt trỏ chuột lên đường dẫn.( Phải đứng sau link và active mới có hiệu quả)
+	- a:active: Dùng để hiển thị khi nhấn giữ không buông chuột.( Phải đứng sau  hover mới có hiệu quả)
 8. Table.
 	- Gồm các thẻ: table, tr, th, td.
 	- border-collapse: seperated* | collapse.
