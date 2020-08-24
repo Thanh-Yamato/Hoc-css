@@ -1,0 +1,19 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "Học css\r --- Có thể xem các thuộc tính trên gg gõ css cheat sheet.\r 1. Font trong css.\r \t- font-family: Kiểu chữ trong css.\r \t- font-weight: normal/bold.\r 2. Spacing trong css: padding, margin.\r \t- padding: Là khoảng cách. giữa đường viền với nội dung bên trong.( Có màu xanh lá trong chrome developer tools). Cú pháp:\r \t\t+ padding-top: Khoảng-cách..\r \t\t+ padding-right: Khoảng-cách..\r \t\t+ padding-bottom: Khoảng-cách..\r \t\t+ padding-left: Khoảng-cách..\r \t\t+ padding: top right bottom left.\r \t\t+ padding: top right-left bottom.\r \t\t+ padding: top-bottom right-left.\r \t\t+ padding: Tất-cả.\r \t-margin: Là khoảng cách. giữa các div với nhau.( Có màu vàng cam trong chrome developer tools). Cú pháp:\r \t\t+ margin-top: Khoảng-cách..\r \t\t+ margin-right: Khoảng-cách..\r \t\t+ margin-bottom: Khoảng-cách..\r \t\t+ margin-left: Khoảng-cách..\r \t\t+ margin: top right bottom left.\r \t\t+ margin: top right-left bottom.\r \t\t+ margin: top-bottom right-left.\r \t\t+ margin: Tất-cả.\r 3. Border.\r \t- border-style: solid | dotted | dashed...\r \t- border-width: Khoảng-cách.\r \t- border-color: Màu.\r \t- Shorthand:\r \t\t+ border: solid 10px red.\r \t- border-top-width.\r \t- border-right-width.\r \t- border-width: top right bottom left.\r 4. Background-color: Bao gồm cả padding lẫn content.\r \t- background-color: Màu.\r \t- background-color: transparent.( Màu trong suốt, có thể thấy được nền của layer đã bị chồng)\r \t- background-color: Gradient.( Kiểu thay đổi nhiều màu, lên gg gõ background gradient generator)\r 5. Background-image: Ảnh nền.\r \t- background-image: url('Đường-dẫn') | none.\r \t- background-size: %.( Kích cỡ của ảnh)\r \t- background-attachment: fixed | scroll*.\r \t- background-clip: border-box* | padding-box | content-box.( Chế độ bao phủ: từ border, padding, content)\r \t- background-position.\r \t- background-repeat: repeat* | no-repeat | repeat-x | repeat-y | space | round.\r \t- background-size: auto | contain | cover.\r 6. Icons: https://fontawesome.com\r 7. Styling link: Có thể dùng với nhiều thẻ khác nhưng chỉ nên dùng với thẻ a.\r \t- a:link: Dùng để hiển thị đường dẫn ban đầu.\r \t- a:visited: Dùng để hiển thị khi đã nhấn vào đường dẫn.\r \t- a:hover: Dùng để hiển thị đặt trỏ chuột lên đường dẫn.( Phải đứng sau link và active mới có hiệu quả)\r \t- a:active: Dùng để hiển thị khi nhấn giữ không buông chuột.( Phải đứng sau  hover mới có hiệu quả)\r 8. Table.\r \t- Gồm các thẻ: table, tr, th, td.\r \t- border-collapse: seperated* | collapse.\r \t- vertical-align: top | middle | bottom.\r \t- text-align: left | center | right.\r \t- th, td không có margin.\r \t- Có thể dùng hover cho table, tr, td, th.\r \t- Tô màu nền theo quy luật: :nth-child(an+b) hoặc :nth-child(even | odd).\r 9. Lists: ul, li, ol.\r \t- list-style-type: none | square | circle | upper/lower roman/alpha.\r \t- list-style-position: inside | outside.\r \t- list-style-image: url('filepath').\r \t- list-style: type position image.\r 10. Display: inline vs block.\r \t- inline: Chiều rộng bằng nội dung của nó, có thể nằm cùng 1 hàng với các inline element khác.\r \t- block: Chiếm trọn 1 hàng.\r \t- Có thể chuyển từ trạng thái inline sang block và ngược lại bằng cách thêm css \r \t\t{\r \t\t\tdisplay: inline/block\r \t\t}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thanh-Yamato/Hoc-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thanh-Yamato/Hoc-css/issues"
+  },
+  "homepage": "https://github.com/Thanh-Yamato/Hoc-css#readme"
+}

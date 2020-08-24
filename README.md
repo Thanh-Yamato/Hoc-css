@@ -31,7 +31,7 @@ Học css
 	- border-top-width.
 	- border-right-width.
 	- border-width: top right bottom left.
-4. Background-color: bao gồm cả padding lẫn content.
+4. Background-color: Bao gồm cả padding lẫn content.
 	- background-color: Màu.
 	- background-color: transparent.( Màu trong suốt, có thể thấy được nền của layer đã bị chồng)
 	- background-color: Gradient.( Kiểu thay đổi nhiều màu, lên gg gõ background gradient generator)
@@ -64,7 +64,7 @@ Học css
 	- list-style: type position image.
 10. Display: inline vs block.
 	- inline: Chiều rộng bằng nội dung của nó, có thể nằm cùng 1 hàng với các inline element khác.
-	- block: chiếm trọn 1 hàng.
+	- block: Chiếm trọn 1 hàng.
 	- Có thể chuyển từ trạng thái inline sang block và ngược lại bằng cách thêm css 
 		{
 			display: inline/block
@@ -88,9 +88,43 @@ Học css
 
 	VD: .list1 > li nghĩa là chỉ những thẻ li là thẻ con nằm trong class list1 mới được chọn, không chọn thẻ li là cháu, chút, chít... của class list1.
 
-	- Adjacent sibling selector( Dùng dấu +): phải cùng hàng, cùng thẻ cha vì nó là anh chị em, và chỉ chọn 1 cái kế tiếp ngay sau giống với bộ kết hợp.
+	- Adjacent sibling selector( Dùng dấu +): Phải cùng hàng, cùng thẻ cha vì nó là anh chị em, và chỉ chọn 1 cái kế tiếp ngay sau giống với bộ kết hợp.
 
 	VD: .list1 + ul nghĩa là chọn thẻ ul ngang hàng với class list1 và ngay sau là ul class list2 và chỉ chọn 1 ul class list2 không chọn tiếp ul class list3.
 
-	- General sibling selector( Dùng dấu ~): phải ngang hàng, cùng thẻ cha vì nó là anh chị em, chọn tất những anh chị em sau nó đúng với bộ chọn.
+	- General sibling selector( Dùng dấu ~): Phải ngang hàng, cùng thẻ cha vì nó là anh chị em, chọn tất những anh chị em sau nó đúng với bộ chọn.
 	VD: .list1 ~ ul nghĩa là chọn tất cả những thẻ ul ngang hàng, đứng sau nó, đó là ul.list2 và cả ul.list3.
+12. Flexbox: Có 1 số thuộc tính là của cha và một số thuộc tính của con.
+	- Thuộc tính thuộc về cha:( .flex-container)
+		+ display: flex;
+		+ flex-direction: row* | column | row-reverse | column-reverse.
+		+ flex-wrap: nowrap* | wrap | wrap-reverse.
+		+ justify-content: Là căn chỉnh có hướng cùng hướng với flex-direction.( row - ngang, column - dọc) 
+			flex-start* | flex-end | center | space-between | space-around | space-evenly
+			flex-start: Mặc định.
+			flex-end: Căn giá trị nằm cuối của thẻ cha.
+			center: Căn giữa.
+			space-between: Căn cho khoảng cách giữa các .item bằng nhau, nhưng không có khoảng cách đầu và cuối.
+			space-around: Căn cho khoảng cách các .item gấp đôi khoảng cách đầu và cuối.
+			space-evenly: Căn cho khoảng cách đầu, cuối, giữa các .item bằng nhau.
+		+ align-items: Là căn chỉnh có hướng vuông góc với hướng của flex-direction.
+			flex-start | flex-end | center | stretch* | baseline
+			flex-start: Là cho nằm đầu .container.
+			flex-end: Căn nằm cuối .container.
+			center: Nằm giữa .container.
+			stretch: Mặc định, kéo dài cho bằng với độ dài .container.
+			baseline: Chỉnh cho nội dung nằm trên 1 trục theo chiều flex-direction.
+		+ align-content: Căn chỉnh nội dung giữa các dòng.
+			flex-start | flex-end | center | stretch* | space-between | space-round | space-evenly.
+	- Thuộc tính thuộc về con:( .item)
+		+ flex-basis: Chỉnh độ dài ban đầu cho mỗi .item con nằm trong .flex-container là flexbox, dãn theo chiều của flex-direction.
+		+ flex-grow: Chia khoảng không gian trống của flexbox cha để thêm vào flex con theo tỉ lệ của flex-grow flex con nảy trên tổng số flex-grow của các flex con.
+			flex-grow: 0* | Number( Không âm)
+		+ flex-shrink: Chia khoảng không gian thiếu của flexbox ra cho các flex con.
+			flex-shrink: 1* | Number( Không âm, 0 thì flex con đó sẽ không bị co lại mà các flex con còn lại bị co)
+			Công thức: flexBasis * ( 1 + flexShrinkNumber / Sum(shrink * flexBasis) * Phần-không-gian-bị-thiếu)
+		+ order: Thay đổi thứ tự hiển thị của các flex con, số nhỏ trước lớn sau, theo thứ tự tăng dần.
+			order: 0* | Number( Có thể là số âm)
+		+ flex: <flex-grow> <flex-shrink> <flex-basis>
+			Là cách viết tắt cho nhanh
+		+ flex-self: Căn chỉnh cho flex con giống như các thuộc tính của align-items.
