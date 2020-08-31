@@ -142,3 +142,36 @@ Học css
 14. float: left | right.
 	clear: left | right | both.
 	Học được cách clearfix bằng cách sử dụng pseudo element after.
+15. Transforms:
+	- transform: translate(x-axis, y-axis)
+		Dùng để di chuyển element từ ví trí hiện tại theo trục x và y.
+		+ x dương hướng qua phải, x âm hướng qua trái.
+		+ y dương hướng xuống dưới, âm hướng lên trên.
+	- transform: rotate(<number>deg)
+		Dùng để xoay element theo chiều kim đồng hồ hoặc ngược chiều kim đồng hồ.
+		+ number > 0: Quay element theo chiều kim đồng hồ.
+		+ number < 0: Quay element ngược chiều kim đồng hồ.
+	- transform: scale(x-scale, y-scale)
+		Dùng để phóng to, thu nhỏ kích thước ảnh ban đầu.
+		+ x-scale: Thu phóng theo chiều ngang. Có 4 trường hợp:
+			* x-scale > 1: Phóng to lên gấp x lần.
+			* 0 < x-scale < 1: Thu nhỏ x lần.
+			* -1 < x-scale < 0: Thu nhỏ |x| lần và đảo ngược element( xoay 180 độ theo trục x).
+			* x-scale < -1: Phóng to |x| lần và đảo ngược element( xoay 180 độ theo trục x).
+		+ y-scale: Thu phóng theo chiều dọc. Có 4 trường hợp:
+			* y-scale > 1: Phóng to y lần.
+			* 0 < y-scale < 1: Thu nhỏ y lần.
+			* -1 < y-scale < 0: Thu nhỏ |y| lần và đảo ngược element( xoay 180 độ theo trục y).
+			* y-scale < -1: Phóng to |y| lần và đảo ngược element(xoay 180 độ theo trục y).
+		Có thể phóng to hay thu nhỏ 1 trục x hoặc y:
+			+ scaleX(x-scale): Chỉ theo trục x.
+			+ scaleY(y-scale): Chỉ theo trục y.
+	- transform: skew(<x-skew>deg, <y-skew>deg)
+		Dùng để xoay element theo cả trục x và trục y.
+		+ x-skew: Dùng để xoay element theo trục x với x-skew độ.
+		+ y-skew: Dùng để xoay element theo trục y với y-skew độ.
+		Có thể dùng skew để xoay theo 1 trục x hoặc y.
+		+ skewX(<x-skew>deg): Dùng để xoay element theo trục x.
+		+ skewY(<y-skew>deg): Dùng để xoay element theo trục y.
+		+ skew(<x-skew>deg): Dùng để xoay element theo trục x khi chỉ có 1 đối số.
+	- transform: matrix(scaleX, skewX, skewY, scaleY, translateX, translateY).
