@@ -139,3 +139,6 @@ Học css
 	- absolute: Thay đổi vị trí 1 cách tương đối so với thẻ bao, chứa nó có position: absolute gần nhất( Nghĩa là nó là con, cháu, chút, chít,... chứ không phải ngang hàng hoặc thấp hơn), và làm thay đổi vị trí của các thẻ có liên quan đến nó( Khá giống với position: fixed).
 
 	- sticky: Thay đổi vị trí 1 cách tương đối so với màn hình giao diện của trình duyệt khi kéo thanh cuộn( Gần giống position: fixed nhưng đây là khi kéo thanh cuộn), sau đó kéo trở lại thì nó sẽ trở về vị trí cũ, không làm thay đổi vị trí của các element liên quan( Khác với position: fixed).
+14. float: left | right.
+	clear: left | right | both.
+	Học được cách clearfix bằng cách sử dụng pseudo element after.
