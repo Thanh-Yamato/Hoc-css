@@ -1,0 +1,50 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.header {
+	height: 100px;
+}
+
+.left-sidebar {
+	float: left;
+	width: 20%;
+	background: #eee;
+}
+
+.main {
+	background: #ddd;
+	width: 60%;
+	float: left;
+}
+
+.main img {
+	float: left;
+	margin: 10px;
+}
+
+.main p::first-letter {
+	margin-left: 10px;
+	color: red;
+	font-size: xx-large;
+}
+
+.wrapper {
+	box-sizing: border-box;
+}
+
+.wrapper::after {
+	content: '';
+	display: block;
+	background-color: #ddd;
+	clear: both;
+}
+
+.footer {
+	margin: 10px 0;
+}
