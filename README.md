@@ -139,6 +139,14 @@ Học css
 	- absolute: Thay đổi vị trí 1 cách tương đối so với thẻ bao, chứa nó có position: absolute gần nhất( Nghĩa là nó là con, cháu, chút, chít,... chứ không phải ngang hàng hoặc thấp hơn), và làm thay đổi vị trí của các thẻ có liên quan đến nó( Khá giống với position: fixed).
 
 	- sticky: Thay đổi vị trí 1 cách tương đối so với màn hình giao diện của trình duyệt khi kéo thanh cuộn( Gần giống position: fixed nhưng đây là khi kéo thanh cuộn), sau đó kéo trở lại thì nó sẽ trở về vị trí cũ, không làm thay đổi vị trí của các element liên quan( Khác với position: fixed).
+
+	***Chú ý: 
+	 - Để căn giữa trung tâm thì cần thêm transform: translate(-50%, -50%).
+	 - z-index: number;
+	 	Chỉ thứ tự hiển thị khi chồng lên nhau.
+	 	Chỉ sử dụng cho thuộc tính position.
+	 	number là số nguyên( Có thể âm hoặc dương), number càng lớn thì xếp càng cao( Giống ngăn xếp càng cao càng nằm ngoài cùng , càng gần hiển thị).
+	***
 14. float: left | right.
 	clear: left | right | both.
 	Học được cách clearfix bằng cách sử dụng pseudo element after.
@@ -156,13 +164,13 @@ Học css
 		+ x-scale: Thu phóng theo chiều ngang. Có 4 trường hợp:
 			* x-scale > 1: Phóng to lên gấp x lần.
 			* 0 < x-scale < 1: Thu nhỏ x lần.
-			* -1 < x-scale < 0: Thu nhỏ |x| lần và đảo ngược element( xoay 180 độ theo trục x).
-			* x-scale < -1: Phóng to |x| lần và đảo ngược element( xoay 180 độ theo trục x).
+			* -1 < x-scale < 0: Thu nhỏ |x| lần và đảo ngược element(Xoay 180 độ theo trục x).
+			* x-scale < -1: Phóng to |x| lần và đảo ngược element( Xoay 180 độ theo trục x).
 		+ y-scale: Thu phóng theo chiều dọc. Có 4 trường hợp:
 			* y-scale > 1: Phóng to y lần.
 			* 0 < y-scale < 1: Thu nhỏ y lần.
-			* -1 < y-scale < 0: Thu nhỏ |y| lần và đảo ngược element( xoay 180 độ theo trục y).
-			* y-scale < -1: Phóng to |y| lần và đảo ngược element(xoay 180 độ theo trục y).
+			* -1 < y-scale < 0: Thu nhỏ |y| lần và đảo ngược element( Xoay 180 độ theo trục y).
+			* y-scale < -1: Phóng to |y| lần và đảo ngược element(Xoay 180 độ theo trục y).
 		Có thể phóng to hay thu nhỏ 1 trục x hoặc y:
 			+ scaleX(x-scale): Chỉ theo trục x.
 			+ scaleY(y-scale): Chỉ theo trục y.
@@ -175,3 +183,16 @@ Học css
 		+ skewY(<y-skew>deg): Dùng để xoay element theo trục y.
 		+ skew(<x-skew>deg): Dùng để xoay element theo trục x khi chỉ có 1 đối số.
 	- transform: matrix(scaleX, skewX, skewY, scaleY, translateX, translateY).
+16. Transitions: Dùng để điều chỉnh hiệu ứng khi thay đổi các thuộc tính của element khi được trỏ chuột vào.
+	- transition: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>
+		+ transition-property: Dùng để chỉ định thuộc tính element bị transition ảnh hưởng khi thay đổi giá trị.
+			transition-property: width[, height, .....]
+		+ transition-duration: Dùng để chỉ định thời gian giới hạn khi dùng transition cho thuộc tính.
+			transition-duration: time( Thường được tính bằng giây s hoặc mili giây ms).
+		+ transition-timing-function: Dùng để thay đổi tốc độ khi dùng transition mỗi lúc nhanh chậm khác nhau(Xem thêm tại easings.net).
+			transition-timing-function: ease* || linear || ease-in || ease-out || ease-in-out.
+		+ transition-delay: Dùng để điều chỉnh độ trễ trước khi bắt đầu các hiệu ứng transition ảnh hưởng.
+			transition-delay: time( Thường được dùng bằng giây s hoặc mili giây ms).
+	- Có thể kết hợp với transforms:
+		transition: transform <time(s)>;
+			+ transform <time(s)>: Dùng để xác định thời gian giới hạn cho sự thay đổi của transform, thường được tính bằng giây. 

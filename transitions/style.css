@@ -1,0 +1,270 @@
+
+/* Chú ý:
+- Để căn giữa một đối tượng sử dụng position absolute thì cần thêm thuộc tính transform: translate cho đối tượng.
+seletors {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+} 
+
+- Để transition làm hiệu ứng lên element nào thì selector của element chứa transition( Giống như lãnh thổ ai thì người đó có quyền).
+
+selector1 {
+	transition-delay: 1s;
+}
+
+selector1:hover {
+	transition-delay: 10s;
+}
+
+Khi hover vào selector1 thì nó phải dùng transition của selector1:hover nghĩa là delay 10s.
+Khi hover( Mouseover), sau đó bỏ chuột ra khỏi element thì nó phải dùng transition của selector1 là chỉ delay 1s thôi.
+*/
+
+/* Bắt đầu. Học về transition kết hợp với transforms */
+.wrapper {
+	width: 500px;
+	height: 400px;
+	border: 1px solid #aaa;
+	margin: 50px auto;
+    box-shadow: 5px 5px 5px 0px #aaa;
+    position: relative;
+}
+
+.caption {
+	font-family: sans-serif;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100px;
+	width: 100px;
+	background: #ddd;
+	transition: width 2s, height 2s, transform 2s;
+	transition-delay: 1s, 2s;
+}
+
+div.box:hover {
+	transform: translate(-50%, -50%) rotate(90deg);
+	width: 200px;
+	height: 200px;
+}
+/* Kết thúc. Học về transition kết hợp với transforms */
+
+/* Bắt đầu. Làm về transition kết hợp với transforms */
+.transition-delay {
+	width: 500px;
+	height: 400px;
+	border: 1px solid #aaa;
+	margin: 50px auto;
+    box-shadow: 5px 5px 5px 0px #aaa;
+    position: relative;
+}
+
+.caption {
+	font-family: sans-serif;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.big-circle {
+	max-width: 100%;
+	width: 100px;
+	height: 100px;
+	background: #e61515;
+	border-radius: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 2s ease; 
+}
+
+.small-circle{
+	width: 20px;
+	height: 20px;
+	background: blue;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition-property: all, transform;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
+}
+
+
+.transition-delay:hover .big-circle {
+	opacity: 0;
+}
+
+.cc1 {
+	transition-delay: 0.1s;
+}
+
+.cc2 {
+    transition-delay: 0.2s;
+}
+
+.cc3 {
+    transition-delay: 0.3s;
+}
+
+.cc4 {
+    transition-delay: 0.4s;
+}
+
+.cc5 {
+    transition-delay: 0.5s;
+}
+
+.cc6 {
+    transition-delay: 0.6s;
+}
+
+.cc7 {
+    transition-delay: 0.7s;
+}
+
+.cc8 {
+	transition-delay: 0.8s;
+}
+
+.transition-delay:hover .cc1 {
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.transition-delay:hover .cc2 {
+    top: 0;
+    left: 100%;
+    transform: translate(-100%, 0);
+}
+
+.transition-delay:hover .cc3 {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+
+.transition-delay:hover .cc4 {
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+}
+
+.transition-delay:hover .cc5 {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.transition-delay:hover .cc6 {
+    top: 100%;
+    left: 0;
+    transform: translate(0, -100%);
+}
+
+.transition-delay:hover .cc7 {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.transition-delay:hover .cc8 {
+	top: 0;
+	left: 0;
+	transform: translate(0, 0);
+}
+/* Kết thúc. Làm về transition kết hợp với transforms */
+
+/* Bắt đầu. Làm về transition kết hợp với transforms nâng cao */
+.circle {
+	max-width: 100%;
+	width: 100px;
+	height: 100px;
+	background: #e61515;
+	border-radius: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.caption {
+	font-family: sans-serif;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.bc1 {
+	z-index: 9; /* Có sử dụng z-index */
+	background: blue;
+	transition: all 1s ease-in-out;
+	transition-delay: 0.1s;
+}
+
+.bc2 {
+	z-index: 8;
+	background: green;
+	transition-property: top, left, transform;
+	transition-duration: 2s;
+	transition-timing-function: ease;
+	transition-delay: 0.5s, 1s, 1s;
+}
+
+.bc3 {
+	z-index: 7;
+	transition: top, left, border-radius, background, transform;
+	transition-duration: 2s, 1s, 0.5s, 0.5s, 0.5s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s, 0.5s, 1s, 1.5s, 0.5s;
+}
+
+.transition-demo:hover .bc1 {
+	top: 0;
+	left: 0;
+	transform: translate(0, 0);
+}
+
+.transition-demo:hover .bc2 {
+	transform: translate(-100%, -100%);
+	left: 100%;
+	top: 100%;
+}
+
+.transition-demo:hover .bc3 {
+	transform: translate(-100%, 0);
+	top: 0;
+	left: 100%;
+	border-radius: initial;
+	background: orange;
+}
+/* Kết thúc. Làm về transition kết hợp với transforms nâng cao */
