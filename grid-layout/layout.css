@@ -1,0 +1,27 @@
+body {
+	font-family: sans-serif;
+}
+
+.item1 {
+	grid-area: myArea; /* Đặt tên cho grid-item */
+}
+
+.grid-container {
+	background-color: #2196f3;
+	padding: 10px;
+	display: grid;
+	/*grid-template-columns: auto auto auto;*/
+	grid-template-areas: 'myArea . .'	/* Dùng thuộc tính này để định dạng bố cục grid theo tên, dấu chấm . thay cho grid-item không đặt tên */
+						 'myArea . .'
+						 'myArea . .';
+	height: 500px;
+	grid-gap: 10px;
+}
+
+.grid-item {
+	font-size: 30px;
+	background-color: rgba( 255, 255, 255, 0.8);
+	padding: 20px 30px;
+	border: 1px solid rgba( 0, 0, 0, 0.8);
+	text-align: center;
+}
