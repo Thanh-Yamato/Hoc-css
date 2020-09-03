@@ -136,7 +136,7 @@ Học css
 
 	- fixed: Thay đổi vị trí 1 cách tương đối so với màn hình cửa sổ trình duyệt, làm thay đổi ví trí của các thẻ xung quanh nó.
 
-	- absolute: Thay đổi vị trí 1 cách tương đối so với thẻ bao, chứa nó có position: absolute gần nhất( Nghĩa là nó là con, cháu, chút, chít,... chứ không phải ngang hàng hoặc thấp hơn), và làm thay đổi vị trí của các thẻ có liên quan đến nó( Khá giống với position: fixed).
+	- absolute: Thay đổi vị trí 1 cách tương đối so với thẻ bao, chứa nó có position: absolute gần nhất( Nghĩa là nó là con, cháu, chút, chít,... chứ không phải ngang hàng hoặc thấp hơn), và làm thay đổi vị trí của các thẻ có liên quan đến nó( Khá giống với position: fixed, ra khỏi normal flow).
 
 	- sticky: Thay đổi vị trí 1 cách tương đối so với màn hình giao diện của trình duyệt khi kéo thanh cuộn( Gần giống position: fixed nhưng đây là khi kéo thanh cuộn), sau đó kéo trở lại thì nó sẽ trở về vị trí cũ, không làm thay đổi vị trí của các element liên quan( Khác với position: fixed).
 
@@ -196,3 +196,30 @@ Học css
 	- Có thể kết hợp với transforms:
 		transition: transform <time(s)>;
 			+ transform <time(s)>: Dùng để xác định thời gian giới hạn cho sự thay đổi của transform, thường được tính bằng giây. 
+17. Media queries.
+	- Dùng để hiển thị khác nhau cho các màn hình thiết bị khác nhau, reponsive để phù hợp với từng thiết bị của người dùng.
+
+		@media all*|not|only mediatype and ( exprestions ) {
+			CSS-code;
+		}
+
+		mediatype: Chỉ loại thiết bị 
+			all | print | screen | speech
+
+		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code
+
+		***Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
+			Độ phân giải màn hình thường là 
+				- Mobile: 480px.
+				- Tablet: 600px.
+		***
+
+		VD: body {
+			background-color: green; /* Định dạng nền màu đỏ cho điện thoại trước */
+		}
+
+		@media screen and (min-width: 480px) { /* Định dạng cho những thiết bị có màn hình dài từ 480px trở lên. */
+			body {
+				background-color: red; 
+			}
+		}
