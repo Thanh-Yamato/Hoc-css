@@ -1,5 +1,8 @@
 Học css
 --- Có thể xem các thuộc tính trên gg gõ css cheat sheet.
+0. Một số thuộc tính hay:
+	- cursor: Chỉ định hình dạng con trỏ chuột.
+	- overflow: Dùng để kiểm soát nội dung khi vượt quá giới hạn của vùng chứa nó.
 1. Font trong css.
 	- font-family: Kiểu chữ trong css.
 	- font-weight: normal/bold.
@@ -198,28 +201,77 @@ Học css
 			+ transform <time(s)>: Dùng để xác định thời gian giới hạn cho sự thay đổi của transform, thường được tính bằng giây. 
 17. Media queries.
 	- Dùng để hiển thị khác nhau cho các màn hình thiết bị khác nhau, reponsive để phù hợp với từng thiết bị của người dùng.
-
 		@media all*|not|only mediatype and ( exprestions ) {
 			CSS-code;
 		}
-
 		mediatype: Chỉ loại thiết bị 
 			all | print | screen | speech
-
 		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code
-
 		***Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
 			Độ phân giải màn hình thường là 
 				- Mobile: 480px.
-				- Tablet: 600px.
-		***
-
-		VD: body {
-			background-color: green; /* Định dạng nền màu đỏ cho điện thoại trước */
+				- Tablet: 600px.***
+		VD: 
+		body {
+			background-color: green; 
+			*Định dạng nền màu đỏ cho điện thoại trước*
 		}
-
-		@media screen and (min-width: 480px) { /* Định dạng cho những thiết bị có màn hình dài từ 480px trở lên. */
+		@media screen and (min-width: 480px) { 
+			*Định dạng cho những thiết bị có màn hình dài từ 480px trở lên.*
 			body {
 				background-color: red; 
 			}
 		}
+18. Grid layout: Chia bố cục thành lưới.
+	Thuộc tính dành cho cha( grid-container):
+		- display: grid | inline-grid;  /*Để chia bố cục trang thành lưới*/
+		- grid-template-columns: <Tỉ lệ theo số cột>;
+			Để chia cột cho trang: 
+			+ 3 cột bằng nhau và độ rộng giãn tự động theo độ dài của trang:
+				grid-template-columns: auto auto auto;
+			+ 3 cột theo tỉ lệ khác nhau theo độ dài của trang:
+				grid-template-columns: 50% 30% 20%; 
+			+ Hoặc có thể chia tỉ lệ khác nhau cho từng cột:
+				grid-template-columns: 100px auto 100px;
+			+ Hoặc theo đơn vị( fr) nghĩa là chia theo phần( fraction) độ dài của trang:
+				grid-template-columns: 5fr 3fr 2fr;
+		- grid-template-row: <Độ cao từng dòng>;
+			Dùng để chia độ cao cho từng dòng:
+				grid-template-rows: 1fr 100px 2fr;
+		- Chia khoảng trống giữa các ô:
+			+ grid-column-gap: <Khoảng cách>px;
+			Chia khoảng trống theo cột.
+			+ grid-row-gap: <Khoảng cách>px;
+			Chia khoảng trống theo hàng.
+			+ grid-gap: grid-row-gap grid-column-gap;
+			Kết hợp thanh viết tắt. Nếu chỉ 1 giá trị thì chia cho cả dòng và cột luôn.
+		- justify-content: start* | center | end | space-between | space-round | space-evenly;
+			+ Căn chỉnh các cột grid-item bên trong theo chiều ngang.
+			+ Chú ý chỉ căn chỉnh được khi tổng chiều rộng của các ô grid-item nhỏ hơn chiều rộng của grid-container.
+		- align-content: start* | center | end | space-between | space-around | space-evenly.
+			+ Căn chỉnh các cột grid-item bên trong theo chiều dọc.
+			+ Chú ý chỉ khi tổng chiều cao của các ô grid trong 1 cột nhỏ hơn chiều cao của grid-container.   
+
+	Thuộc tính cho con( grid-item):
+		- Gộp số ô cho 1 item:
+			Đầu tiên biết row-lines, column-lines
+				+ row-lines: Là đường ở giữa các dòng, tính từ trước dòng đầu tiên là 1.
+				+ column-lines: Là đường ở giữa các cột, tính từ trước cột đầu tiên là 1.
+			Để gộp theo cột:
+				+ grid-column-start: column-line; /*Cột bắt đầu/*
+				+ grid-column-end: column-line; /*Dòng kết thúc/*
+				Hoặc viết tắt:
+				+ grid-column: grid-column-start / grid-column-end; /*Nếu chỉ có 1 giá trị thì như là grid-column-start./*
+				+ Để từ grid-column-start kéo thêm n cột thì dùng span:
+					grid-column: grid-column-start / span n;
+					VD: grid-column: 1 / span 3; /*Từ column-line 1 kéo dài 3 cột*/
+			Để gộp theo dòng:
+				+ grid-row-start: row-line; /*Dòng bắt đầu*/
+				+ grid-row-end: row-line; *Dòng kết thúc*
+				+ grid-row: grid-row-start / grid-row-end; /*Nếu chỉ có 1 giá trị thì giống grid-row-start*/
+				+ Để gộp n dòng từ grid-row-start dùng span:
+					grid-row: grid-row-start / span n;
+					VD: grid-row: 1 / span 2; /*Từ row-line 1 gộp thêm n dòng*/
+			Để gộp nhiều dòng và cột:
+				+ grid-area: grid-column-start grid-row-start grid-column-end grid-row-end;
+
