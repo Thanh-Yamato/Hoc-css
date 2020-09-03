@@ -207,10 +207,10 @@ Học css
 		mediatype: Chỉ loại thiết bị 
 			all | print | screen | speech
 		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code
-		**Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
+		***Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
 			Độ phân giải màn hình thường là 
 				- Mobile: 480px.
-				- Tablet: 600px.**
+				- Tablet: 600px.***
 		VD: 
 		body {
 			background-color: green; 
@@ -224,7 +224,7 @@ Học css
 		}
 18. Grid layout: Chia bố cục thành lưới.
 	Thuộc tính dành cho cha( grid-container):
-		- display: grid | inline-grid;  *Để chia bố cục trang thành lưới*
+		- display: grid | inline-grid;  /*Để chia bố cục trang thành lưới*/
 		- grid-template-columns: <Tỉ lệ theo số cột>;
 			Để chia cột cho trang: 
 			+ 3 cột bằng nhau và độ rộng giãn tự động theo độ dài của trang:
@@ -258,20 +258,20 @@ Học css
 				+ row-lines: Là đường ở giữa các dòng, tính từ trước dòng đầu tiên là 1.
 				+ column-lines: Là đường ở giữa các cột, tính từ trước cột đầu tiên là 1.
 			Để gộp theo cột:
-				+ grid-column-start: column-line; *Cột bắt đầu*
-				+ grid-column-end: column-line; *Dòng kết thúc*
+				+ grid-column-start: column-line; /*Cột bắt đầu/*
+				+ grid-column-end: column-line; /*Dòng kết thúc/*
 				Hoặc viết tắt:
-				+ grid-column: grid-column-start / grid-column-end; *Nếu chỉ có 1 giá trị thì như là grid-column-start.*
+				+ grid-column: grid-column-start / grid-column-end; /*Nếu chỉ có 1 giá trị thì như là grid-column-start./*
 				+ Để từ grid-column-start kéo thêm n cột thì dùng span:
 					grid-column: grid-column-start / span n;
-					VD: grid-column: 1 / span 3; *Từ column-line 1 kéo dài 3 cột
+					VD: grid-column: 1 / span 3; /*Từ column-line 1 kéo dài 3 cột*/
 			Để gộp theo dòng:
-				+ grid-row-start: row-line; *Dòng bắt đầu*
+				+ grid-row-start: row-line; /*Dòng bắt đầu*/
 				+ grid-row-end: row-line; *Dòng kết thúc*
-				+ grid-row: grid-row-start / grid-row-end; *Nếu chỉ có 1 giá trị thì giống grid-row-start*
+				+ grid-row: grid-row-start / grid-row-end; /*Nếu chỉ có 1 giá trị thì giống grid-row-start*/
 				+ Để gộp n dòng từ grid-row-start dùng span:
 					grid-row: grid-row-start / span n;
-					VD: grid-row: 1 / span 2; *Từ row-line 1 gộp thêm n dòng*
+					VD: grid-row: 1 / span 2; /*Từ row-line 1 gộp thêm n dòng*/
 			Để gộp nhiều dòng và cột:
 				+ grid-area: grid-column-start grid-row-start grid-column-end grid-row-end;
 
