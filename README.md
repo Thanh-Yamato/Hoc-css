@@ -292,3 +292,10 @@ Học css
 			Để gộp nhiều dòng và cột:
 				+ grid-area: grid-column-start grid-row-start grid-column-end grid-row-end;
 
+19. Units: Các đơn vị đo trong trang web.
+	- px: Cố định, không thay đổi khi thay đổi kích thước trang web.
+	- em, rem, vw, vh: Thay đổi khi thay đổi kích thước trang web.
+		+ em: Thay đổi theo kích thước hiện tại của phần tử( element), hay là của cha nó( 1em là kích thước hiện tại, 2em là gấp đôi kích thước hiện tại).
+		+ rem: Thay đổi theo kích thước của phần tử gốc( root element), kích thước ban đầu của trang( 1rem là bằng kích thước phần tử gốc, 2rem gấp đôi phần tử gốc).
+		+ vw: 1vw = 1% của chiều rộng màn hình hiển thị trang web.
+		+ vh: 1vh = 1% của chiều cao màn hình hiển thị trang web.
