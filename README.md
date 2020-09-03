@@ -206,9 +206,11 @@ Học css
 		@media all*|not|only mediatype and ( exprestions ) {
 			CSS-code;
 		}
+
 		mediatype: Chỉ loại thiết bị 
 			all | print | screen | speech
-		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code
+
+		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code.
 
 		***Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
 			Độ phân giải màn hình thường là 
@@ -292,3 +294,10 @@ Học css
 			Để gộp nhiều dòng và cột:
 				+ grid-area: grid-column-start grid-row-start grid-column-end grid-row-end;
 
+19. Units: Các đơn vị đo trong trang web.
+	- px: Cố định, không thay đổi khi thay đổi kích thước trang web.
+	- em, rem, vw, vh: Thay đổi khi thay đổi kích thước trang web.
+		+ em: Thay đổi theo kích thước hiện tại của phần tử( element), hay là của cha nó( 1em là kích thước hiện tại, 2em là gấp đôi kích thước hiện tại).
+		+ rem: Thay đổi theo kích thước của phần tử gốc( root element), kích thước ban đầu của trang( 1rem là bằng kích thước phần tử gốc, 2rem gấp đôi phần tử gốc).
+		+ vw: 1vw = 1% của chiều rộng màn hình hiển thị trang web.
+		+ vh: 1vh = 1% của chiều cao màn hình hiển thị trang web.
