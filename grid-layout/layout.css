@@ -11,9 +11,12 @@ body {
 	padding: 10px;
 	display: grid;
 	/*grid-template-columns: auto auto auto;*/
-	grid-template-areas: 'myArea . .'	/* Dùng thuộc tính này để định dạng bố cục grid theo tên, dấu chấm . thay cho grid-item không đặt tên */
-						 'myArea . .'
-						 'myArea . .';
+	grid-template-areas: 'myArea . .' 'myArea . .' 'myArea . .';
+		/* 
+		   Dùng thuộc tính này để định dạng bố cục grid theo tên.
+		   Dấu chấm . thay cho grid-item không đặt tên.
+		   Dùng cặp nháy đơn để hiển thị cho từng dòng.
+		*/			
 	height: 500px;
 	grid-gap: 10px;
 }
