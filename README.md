@@ -206,9 +206,11 @@ Học css
 		@media all*|not|only mediatype and ( exprestions ) {
 			CSS-code;
 		}
+
 		mediatype: Chỉ loại thiết bị 
 			all | print | screen | speech
-		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code
+
+		expresstion: Biếu thức định kiểu, nếu đúng với tất cả các điều kiện trong biểu thức thì sẽ sẽ được hiển thị như CSS-code.
 
 		***Chú ý: Thường có nguyên tắc mobile first nghĩa là định dạng css cho mobile trước sau đó mới đến thiết bị khác vì người dùng điện thoại để lướt web nhiều hơn.
 			Độ phân giải màn hình thường là 
